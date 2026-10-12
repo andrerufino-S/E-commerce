@@ -1,0 +1,8 @@
+import { IPaymentMethod } from './IPaymentMethod';
+import logger from '../lib/logger';
+
+export class PixPayment implements IPaymentMethod {
+  async process(amount: number): Promise<void> {
+    logger.info(`Processando Pix de R$ ${amount}...`);
+  }
+}
